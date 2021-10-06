@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.scoreCount{
+    color: red;
+    font-size: 30px;
+}
+.gameContainer{
+    width: 100%;
+    height: 100vh;
+    background: rgb(120, 248, 236);
+    border: 1px black solid;
+}
+.gameOver{
+    visibility: hidden;
+    font-size: 50px;
+    color: red;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.gameOver span{
+    font-weight: 600;
+    color:chartreuse;
+    font-size: 24px;
+}
+
+.enemy{
+
+    background-image: url("enemy.png");
+    background-position: no-repeat;
+    width: 50px;
+    height: 75px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    
+    /* border: 1px solid black; */
+}
+
+.hero{
+
+    background-image: url("hero.png");
+    background-position: no-repeat;
+    width: 45px;
+    height: 100px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    /* border: 1px solid rgb(48, 18, 18); */
+    margin-left: 20px;
+}
+
+.animateHero{
+    animation: hero 1s linear;
+}
+
+@keyframes hero{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 200px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+.animateEnemy{
+    animation: enemy 5s linear infinite;
+}
+
+@keyframes enemy{
+    0%{
+        left:100%;
+    }
+    100%{
+        left: -10vh;
+    }
+}
